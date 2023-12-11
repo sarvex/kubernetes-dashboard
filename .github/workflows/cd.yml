@@ -48,7 +48,7 @@ jobs:
       - run: yarn
       - run: node hack/version.mjs
       - run: go mod download
-      - uses: docker/setup-qemu-action@8b122486cedac8393e77aa9734c3528886e4a1a8 # v1
+      - uses: docker/setup-qemu-action@68827325e0b33c7199eb31dd4e31fbe9023e06e3 # v1
       - uses: docker/setup-buildx-action@v2
       - env:
           DOCKER_USER: ${{ secrets.DOCKER_USER }}
@@ -83,7 +83,7 @@ jobs:
       - run: yarn
       - run: node hack/version.mjs
       - run: go mod download
-      - uses: docker/setup-qemu-action@v2
+      - uses: docker/setup-qemu-action@v3
       - uses: docker/setup-buildx-action@v2
       - env:
           DOCKER_USER: ${{ secrets.DOCKER_RELEASE_USER }}
